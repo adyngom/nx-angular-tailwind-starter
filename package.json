@@ -25,7 +25,10 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "postcss:build": "postcss apps/tukki/src/styles.pcss -o apps/tukki/src/styles.css",
+  	"prestart": "npm run postcss:build",
+  	"prebuild": "npm run postcss:build -- --env=production"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +42,7 @@
     "@angular/router": "^11.0.0",
     "@nrwl/angular": "11.2.10",
     "rxjs": "~6.6.3",
+    "tailwindcss": "^2.0.2",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
   },
@@ -69,6 +73,8 @@
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1",
     "prettier": "2.2.1",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
