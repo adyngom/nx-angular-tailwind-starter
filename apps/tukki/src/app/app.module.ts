@@ -6,11 +6,18 @@ import { AppComponent } from './app.component';
 /**
  * Shared modules
  */
-import { SharedUiHeaderModule } from '@tukki/shared/ui/header'
+import { 
+  SharedUiHeaderModule,
+  SharedUiHeroModule 
+} from '@tukki/shared/ui'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, SharedUiHeaderModule],
+  imports: [
+    BrowserModule, 
+    SharedUiHeaderModule,
+    SharedUiHeroModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

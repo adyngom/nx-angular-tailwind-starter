@@ -1,6 +1,7 @@
 {
   "version": 1,
   "cli": {
+    "analytics": "71c04e7b-554a-489b-bec3-f437c975b324",
     "defaultCollection": "@nrwl/angular"
   },
   "schematics": {
@@ -166,6 +167,31 @@
           "outputs": ["coverage/libs/shared/ui/header"],
           "options": {
             "jestConfig": "libs/shared/ui/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-hero": {
+      "projectType": "library",
+      "root": "libs/shared/ui/hero",
+      "sourceRoot": "libs/shared/ui/hero/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/hero/src/**/*.ts",
+              "libs/shared/ui/hero/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/hero"],
+          "options": {
+            "jestConfig": "libs/shared/ui/hero/jest.config.js",
             "passWithNoTests": true
           }
         }

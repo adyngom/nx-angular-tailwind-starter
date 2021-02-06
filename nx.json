@@ -23,6 +23,7 @@
   "projects": {
     "tukki": { "tags": [] },
     "tukki-e2e": { "tags": [], "implicitDependencies": ["tukki"] },
-    "shared-ui-header": { "tags": [] }
+    "shared-ui-header": { "tags": [] },
+    "shared-ui-hero": { "tags": [] }
   }
 }
