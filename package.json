@@ -25,10 +25,7 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help",
-    "postcss:build": "postcss apps/tukki/src/styles.pcss -o apps/tukki/src/styles.css",
-    "prestart": "npm run postcss:build",
-    "prebuild": "npm run postcss:build -- --env=production"
+    "help": "nx help"
   },
   "private": true,
   "dependencies": {
@@ -42,11 +39,11 @@
     "@angular/router": "^11.0.0",
     "@nrwl/angular": "11.2.10",
     "rxjs": "~6.6.3",
-    "tailwindcss": "^2.0.2",
     "tslib": "^2.0.0",
     "zone.js": "^0.10.2"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "11.0.0",
     "@angular-devkit/build-angular": "~0.1100.1",
     "@angular-eslint/eslint-plugin": "~1.0.0",
     "@angular-eslint/eslint-plugin-template": "~1.0.0",
@@ -54,6 +51,7 @@
     "@angular/cli": "~11.0.0",
     "@angular/compiler-cli": "^11.0.0",
     "@angular/language-service": "^11.0.0",
+    "@ngneat/tailwind": "^6.0.3",
     "@nrwl/cli": "11.2.10",
     "@nrwl/cypress": "11.2.10",
     "@nrwl/eslint-plugin-nx": "11.2.10",
@@ -74,8 +72,9 @@
     "jest": "26.2.2",
     "jest-preset-angular": "8.3.2",
     "postcss": "^8.2.4",
-    "postcss-cli": "^8.3.1",
+    "postcss-ng-tailwind-in-components": "0.0.3",
     "prettier": "2.2.1",
+    "tailwindcss": "2.0.2",
     "ts-jest": "26.4.0",
     "ts-node": "~9.1.1",
     "typescript": "~4.0.3"
