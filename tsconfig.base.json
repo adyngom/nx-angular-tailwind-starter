@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@tukki/shared/ui/header": ["libs/shared/ui/header/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

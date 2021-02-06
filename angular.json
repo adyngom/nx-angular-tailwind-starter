@@ -142,6 +142,31 @@
           }
         }
       }
+    },
+    "shared-ui-header": {
+      "projectType": "library",
+      "root": "libs/shared/ui/header",
+      "sourceRoot": "libs/shared/ui/header/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/header/src/**/*.ts",
+              "libs/shared/ui/header/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/header"],
+          "options": {
+            "jestConfig": "libs/shared/ui/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

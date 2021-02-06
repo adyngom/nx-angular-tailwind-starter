@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'tukki';
+  title = 'How to add TailwindCSS to your Angular Nx Workspace';
 }

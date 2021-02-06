@@ -27,8 +27,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "postcss:build": "postcss apps/tukki/src/styles.pcss -o apps/tukki/src/styles.css",
-  	"prestart": "npm run postcss:build",
-  	"prebuild": "npm run postcss:build -- --env=production"
+    "prestart": "npm run postcss:build",
+    "prebuild": "npm run postcss:build -- --env=production"
   },
   "private": true,
   "dependencies": {
