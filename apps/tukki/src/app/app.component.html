@@ -10,7 +10,19 @@
 <!-- Locations scetion -->
 <section>
   <tukki-section-title></tukki-section-title>
-  <tukki-card></tukki-card>
+  <div
+    class="p-8 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+  >
+    <ng-template ngFor let-location [ngForOf]="locations">
+      <tukki-card
+        [title]="location.title"
+        [imgSrc]="location.imgSrc"
+        [imgAlt]="location?.imgAlt"
+        [summary]="location.summary"
+        [tags]="location?.tags"
+      ></tukki-card>
+    </ng-template>
+  </div>
 </section>
 
 <footer class="p-12 text-white bg-gray-900 grid grid-cols-4"></footer>

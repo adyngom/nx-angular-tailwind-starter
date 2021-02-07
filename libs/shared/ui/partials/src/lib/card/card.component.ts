@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
   selector: 'tukki-card',
@@ -8,5 +8,19 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
+  @Input() 
+  imgSrc: string;
+
+  @Input() 
+  imgAlt: string | null;
+
+  @Input()
+  title = 'Card title';
+
+  @Input()
+  summary: string;
+
+  @Input()
+  tags: Array<string>
 
 }
