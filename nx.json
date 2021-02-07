@@ -25,6 +25,7 @@
     "tukki-e2e": { "tags": [], "implicitDependencies": ["tukki"] },
     "shared-ui-header": { "tags": [] },
     "shared-ui-hero": { "tags": [] },
-    "shared-ui-promo": { "tags": [] }
+    "shared-ui-promo": { "tags": [] },
+    "shared-ui-partials": { "tags": [] }
   }
 }
