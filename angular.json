@@ -221,6 +221,31 @@
           }
         }
       }
+    },
+    "shared-ui-partials": {
+      "projectType": "library",
+      "root": "libs/shared/ui/partials",
+      "sourceRoot": "libs/shared/ui/partials/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/partials/src/**/*.ts",
+              "libs/shared/ui/partials/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/partials"],
+          "options": {
+            "jestConfig": "libs/shared/ui/partials/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

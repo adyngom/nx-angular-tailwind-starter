@@ -6,3 +6,20 @@
 
 <!-- Promo section-->
 <tukki-promo></tukki-promo>
+
+<!-- Locations scetion -->
+<section>
+  <tukki-section-title></tukki-section-title>
+  <div
+    class="p-8 mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-5"
+  >
+    <tukki-card
+      *ngFor="let location of locations"
+      [title]="location.title"
+      [imgSrc]="location.imgSrc"
+      [imgAlt]="location?.imgAlt"
+      [summary]="location.summary"
+      [tags]="location?.tags"
+    ></tukki-card>
+  </div>
+</section>

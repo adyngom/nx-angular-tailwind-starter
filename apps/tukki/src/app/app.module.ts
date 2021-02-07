@@ -9,7 +9,8 @@ import { AppComponent } from './app.component';
 import { 
   SharedUiHeaderModule,
   SharedUiHeroModule,
-  SharedUiPromoModule 
+  SharedUiPromoModule,
+  SharedUiPartialsModule 
 } from '@tukki/shared/ui'
 
 @NgModule({
@@ -18,7 +19,8 @@ import {
     BrowserModule, 
     SharedUiHeaderModule,
     SharedUiHeroModule,
-    SharedUiPromoModule
+    SharedUiPromoModule,
+    SharedUiPartialsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
