@@ -19,7 +19,8 @@
       "@tukki/shared/ui/header": ["libs/shared/ui/header/src/index.ts"],
       "@tukki/shared/ui/hero": ["libs/shared/ui/hero/src/index.ts"],
       "@tukki/shared/ui/promo": ["libs/shared/ui/promo/src/index.ts"],
-      "@tukki/shared/ui/partials": ["libs/shared/ui/partials/src/index.ts"]
+      "@tukki/shared/ui/partials": ["libs/shared/ui/partials/src/index.ts"],
+      "@tukki/shared/ui/footer": ["libs/shared/ui/footer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -26,6 +26,7 @@
     "shared-ui-header": { "tags": [] },
     "shared-ui-hero": { "tags": [] },
     "shared-ui-promo": { "tags": [] },
-    "shared-ui-partials": { "tags": [] }
+    "shared-ui-partials": { "tags": [] },
+    "shared-ui-footer": { "tags": [] }
   }
 }

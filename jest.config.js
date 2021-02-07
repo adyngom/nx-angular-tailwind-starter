@@ -5,5 +5,6 @@ module.exports = {
     '<rootDir>/libs/shared/ui/hero',
     '<rootDir>/libs/shared/ui/promo',
     '<rootDir>/libs/shared/ui/partials',
+    '<rootDir>/libs/shared/ui/footer',
   ],
 };

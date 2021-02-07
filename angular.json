@@ -246,6 +246,31 @@
           }
         }
       }
+    },
+    "shared-ui-footer": {
+      "projectType": "library",
+      "root": "libs/shared/ui/footer",
+      "sourceRoot": "libs/shared/ui/footer/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/footer/src/**/*.ts",
+              "libs/shared/ui/footer/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/footer"],
+          "options": {
+            "jestConfig": "libs/shared/ui/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
