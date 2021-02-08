@@ -17,18 +17,21 @@
       }
     },
     "@nrwl/angular:application": {
-      "style": "css",
+      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
       "e2eTestRunner": "cypress"
     },
     "@nrwl/angular:library": {
-      "style": "css",
+      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "css"
+      "style": "scss"
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss"
     }
   },
   "defaultProject": "tukki",
@@ -48,8 +51,13 @@
             "polyfills": "apps/tukki/src/polyfills.ts",
             "tsConfig": "apps/tukki/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/tukki/src/favicon.ico", "apps/tukki/src/assets"],
-            "styles": ["apps/tukki/src/styles.css"],
+            "assets": [
+              "apps/tukki/src/favicon.ico",
+              "apps/tukki/src/assets"
+            ],
+            "styles": [
+              "apps/tukki/src/styles.scss"
+            ],
             "scripts": [],
             "customWebpackConfig": {
               "path": "webpack.config.js"
@@ -113,7 +121,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/tukki"],
+          "outputs": [
+            "coverage/apps/tukki"
+          ],
           "options": {
             "jestConfig": "apps/tukki/jest.config.js",
             "passWithNoTests": true
@@ -142,7 +152,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/tukki-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/tukki-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -164,7 +176,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui/header"],
+          "outputs": [
+            "coverage/libs/shared/ui/header"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui/header/jest.config.js",
             "passWithNoTests": true
@@ -189,7 +203,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui/hero"],
+          "outputs": [
+            "coverage/libs/shared/ui/hero"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui/hero/jest.config.js",
             "passWithNoTests": true
@@ -214,7 +230,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui/promo"],
+          "outputs": [
+            "coverage/libs/shared/ui/promo"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui/promo/jest.config.js",
             "passWithNoTests": true
@@ -239,7 +257,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui/partials"],
+          "outputs": [
+            "coverage/libs/shared/ui/partials"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui/partials/jest.config.js",
             "passWithNoTests": true
@@ -264,7 +284,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/ui/footer"],
+          "outputs": [
+            "coverage/libs/shared/ui/footer"
+          ],
           "options": {
             "jestConfig": "libs/shared/ui/footer/jest.config.js",
             "passWithNoTests": true
