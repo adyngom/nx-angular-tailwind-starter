@@ -6,23 +6,31 @@
 
 Though native support has been announced by the [Angular team in upcoming versions](https://github.com/angular/angular-cli/commit/73b409881f71a8235769a345356dcde3c568d0c3), enterprise users who might want to take advantage of it might not have the luxury of quickly updating their versions.
 
-# Meet Tukki
+# Meet Tukki ✈️
 
-**Tukki** means travel in my native tongue Wolof spoken in [Senegal](https://www.cnn.com/travel/article/senegal-travel-parts-unknown/index.html) and the [Gambia](https://www.lonelyplanet.com/the-gambia). It was a perfect name to give for a starter that will allow you to take a journey into Tailwind within an Angular project - first class with no frustations :)
-
-This project was generated using [Nx](https://nx.dev).
-
-<p align="center"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="450"></p>
-
-🔎 **Nx is a set of Extensible Dev Tools for Monorepos.**
+**Tukki** means travel in my native tongue Wolof spoken in [Senegal](https://www.cnn.com/travel/article/senegal-travel-parts-unknown/index.html) and the [Gambia](https://www.lonelyplanet.com/the-gambia). It was a perfect name to give for a starter that will allow you to take a journey into Tailwind within an Angular project - first class with no frustations 😀⛱️
 
 ## Quick Start & Documentation
 
-[Nx Documentation](https://nx.dev/angular)
+You could just zip the project and check out the setup if you already have an existing project or you could just clone it and take it for a spin. If you choose the latter these steps might be helpful:
 
-[10-minute video showing all Nx features](https://nx.dev/angular/getting-started/what-is-nx)
+I assume you already have the Nx Cli installed, if not start with
 
-[Interactive Tutorial](https://nx.dev/angular/tutorial/01-create-application)
+```
+npm install -g nx
+```
+
+you can swap **yarn** for **npm** if used as your package manager.
+
+After cloning the repo cd into it and just run
+
+```
+npm install
+```
+
+you will see the structure below with **tukki** as the default app, a **shared/ui** folder under **libs** which host the bulk of the Tailwind UI components.
+
+**Tailwind** was installed using the [**@ngneat/tailwind**](https://github.com/ngneat/tailwind) plugin - I highly recommend checking out the article - so you will see a couple of files that were added in root by the plugin: **tailwind.config.js** and **webpack.config.js**
 
 ## Adding capabilities to your workspace
 
