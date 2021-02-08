@@ -42,14 +42,28 @@ You can see the modified entry in the \*\*angular.json" file
           "builder": "@angular-builders/custom-webpack:browser",
           ...
 ```
+You will also see that the Tailwind directives have been added as an import at the top of your **styles.[s]css** file
+```css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+```
 
-You can read more about it in the article mentionned above, but now after having your dependencies instlled, just run
+You can read more about it in the article mentionned above, but now after having your dependencies installed, just run
 
 ```
 npm start
 ```
 
-And you should see the page render just like the picture of the landing page above.
+When the build succeeds, you will notice a huge file size for your styles, which is to be expected since Tailwind comes with thousand of utility classes
+
+```
+pic of dev build
+```
+
+But this is where **postcss** kicks in when you create a production build which gets rid off all the unwanted and unused CSS
+
+Now you can navigate to your local url and you should see the page render just like the picture of the landing page above.
 
 ## Now what??
 
@@ -95,5 +109,4 @@ All the images use in the starter page are copyrighted to their respecvtive owne
 - [**Community**](https://expressjs.com)
   - [**Amadou Sall**](https://www.amadousall.com/) ([**@ahasall**](https://twitter.com/ahasall)) - Don't miss his talk on Tailwind at NGConf 2021
   - **Ibrahima Ciss**] ([**@bionik6**](https://twitter.com/bionik6))
-- [Node](https://nodejs.org)
-  - `ng add @nrwl/node`
+  - [**Bram Borggreve**](https://beesoftlabs.dev/es/inicio) ([**@beeman_nl**](https://twitter.com/beeman_nl))
