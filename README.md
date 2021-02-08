@@ -81,8 +81,8 @@ All the images use in the starter page are copyrighted to their respecvtive owne
 - [Tailwind UI Components](https://tailwindui.com/preview)
   - `Hero Section`
   - `Feature Section`
-- [React](https://reactjs.org)
-  - `ng add @nrwl/react`
+- [Unsplash](https://unsplash.com/)
+  - **Stakkholtsgja canyon, Iceland** <span>Photo by <a href="https://unsplash.com/@r3dmax?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonatan Pie</a> on <a href="https://unsplash.com/s/photos/northern-lights?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 - Web (no framework frontends)
   - `ng add @nrwl/web`
 - [Nest](https://nestjs.com)
