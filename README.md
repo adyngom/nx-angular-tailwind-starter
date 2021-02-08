@@ -57,9 +57,7 @@ npm start
 
 When the build succeeds, you will notice a huge file size for your styles, which is to be expected since Tailwind comes with thousand of utility classes
 
-```
-pic of dev build
-```
+<p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/styles-heavy-dev-build.jpg"></p>
 
 But this is where **postcss** kicks in when you create a production build which gets rid off all the unwanted and unused CSS
 
