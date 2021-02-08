@@ -1,6 +1,14 @@
+# NX Angular Tailwind Starter
 
+<p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/nx-angular-tailwind-starter.jpg"></p>
 
-# Tukki
+[Tailwind CSS](https://tailwindcss.com/) is a superb utility first CSS framework that has taken the world of component first development by storm. It can be sometimes challenging to have it up and running in an Angular project let alone in an [Nx workspace](https://nx.dev).
+
+Though native support has been announced by the [Angular team in upcoming versions](https://github.com/angular/angular-cli/commit/73b409881f71a8235769a345356dcde3c568d0c3), enterprise users who might want to take advantage of it might not have the luxury of quickly updating their versions.
+
+# Meet Tukki
+
+**Tukki** means travel in my native tongue Wolof spoken in [Senegal](https://www.cnn.com/travel/article/senegal-travel-parts-unknown/index.html) and the [Gambia](https://www.lonelyplanet.com/the-gambia). It was a perfect name to give for a starter that will allow you to take a journey into Tailwind within an Angular project - first class with no frustations :)
 
 This project was generated using [Nx](https://nx.dev).
 
@@ -86,11 +94,6 @@ Run `nx dep-graph` to see a diagram of the dependencies of your projects.
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev/angular) to learn more.
-
-
-
-
-
 
 ## ☁ Nx Cloud
 
