@@ -32,16 +32,55 @@ you will see the structure below with **tukki** as the default app, a **shared/u
 
 **Tailwind** was installed using the [**@ngneat/tailwind**](https://github.com/ngneat/tailwind) plugin - I highly recommend checking out the article - so you will see a couple of files that were added in root by the plugin: **tailwind.config.js** and **webpack.config.js**
 
-## Adding capabilities to your workspace
+In a short summary the plugin write an external webpack config file that properly adds the tailwind configuration, this gets picked by your build process using the [**@angular-builders/custom-webpack**](https://www.npmjs.com/package/@angular-builders/custom-webpack) package.
 
-Nx supports many plugins which add capabilities for developing different types of applications and different tools.
+You can see the modified entry in the \*\*angular.json" file
 
-These capabilities include generating applications, libraries, etc as well as the devtools to test, and build projects as well.
+```json
+"architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          ...
+```
 
-Below are our core plugins:
+You can read more about it in the article mentionned above, but now after having your dependencies instlled, just run
 
-- [Angular](https://angular.io)
-  - `ng add @nrwl/angular`
+```
+npm start
+```
+
+And you should see the page render just like the picture of the landing page above.
+
+## Now what??
+
+Yeah you have an Angular project inside an Nx workspace with Tailwind properly setup - it's getting hot in here 🔥🔥🔥🔥
+
+Take a look at the **libs/shared/ui** folder and see how I've tried to emulate the model from Angular material by having everything reusable as a module, you will find individuals components under the **libs/shared/ui/partials** folder and how everuthing gets imported in the **app.module.ts** file
+
+```javascript
+/**
+ * Shared modules
+ */
+import {
+  SharedUiHeaderModule,
+  SharedUiHeroModule,
+  SharedUiPromoModule,
+  SharedUiPartialsModule,
+  SharedUiFooterModule,
+} from '@tukki/shared/ui';
+```
+
+If you like that type of flow, well you are in for a treat, if not no hard feelings do what works for you - feel free to delete and replace as you see fit.
+
+🧙🏾 Tailwind's magic is sprinkled all around the project already and that's the only thing that matters
+
+## Copyrights notice and shoutouts
+
+All the images use in the starter page are copyrighted to their respecvtive owners and should not be used in a commercial project without their consent or within the boundaries of their provided license agreements.
+
+- [Tailwind UI Components](https://tailwindui.com/preview)
+  - `Hero Section`
+  - `Feature Section`
 - [React](https://reactjs.org)
   - `ng add @nrwl/react`
 - Web (no framework frontends)
