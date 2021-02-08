@@ -1,5 +1,5 @@
 # NX Angular Tailwind Starter
-
+***Made with ❤️ 😅 and 😹 by [Ady Ngom](https://adyngom.com) - [@adyngom](https://twitter.com/adyngom)***
 <p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/nx-angular-tailwind-starter.jpg"></p>
 
 [Tailwind CSS](https://tailwindcss.com/) is a superb utility first CSS framework that has taken the world of component first development by storm. It can be sometimes challenging to have it up and running in an Angular project let alone in an [Nx workspace](https://nx.dev).
@@ -16,7 +16,7 @@ You could just zip the project and check out the setup if you already have an ex
 
 I assume you already have the Nx Cli installed, if not start with
 
-```
+```bash
 npm install -g nx
 ```
 
@@ -24,7 +24,7 @@ you can swap **yarn** for **npm** if used as your package manager.
 
 After cloning the repo cd into it and just run
 
-```
+```bash
 npm install
 ```
 
@@ -51,23 +51,25 @@ You will also see that the Tailwind directives have been added as an import at t
 
 You can read more about it in the article mentionned above, but now after having your dependencies installed, just run
 
-```
+```bash
 npm start
 ```
 
 When the build succeeds, you will notice a huge file size for your styles, which is to be expected since Tailwind comes with thousand of utility classes
 
-<p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/styles-heavy-dev-build.jpg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/styles-heavy-dev-build"></p>
 
 But this is where **postcss** kicks in when you create a production build which gets rid off all the unwanted and unused CSS
+
+<p align="center"><img src="https://raw.githubusercontent.com/adyngom/nx-angular-tailwind-starter/readme-media/images/styles-light-prod-build"></p>
 
 Now you can navigate to your local url and you should see the page render just like the picture of the landing page above.
 
 ## Now what??
 
-Yeah you have an Angular project inside an Nx workspace with Tailwind properly setup - it's getting hot in here 🔥🔥🔥🔥
+***Yeah you have an Angular project inside an Nx workspace with Tailwind properly setup - it's getting hot in here 🔥🔥🔥🔥***
 
-Take a look at the **libs/shared/ui** folder and see how I've tried to emulate the model from Angular material by having everything reusable as a module, you will find individuals components under the **libs/shared/ui/partials** folder and how everuthing gets imported in the **app.module.ts** file
+Take a look at the **libs/shared/ui** folder and see how I've tried to emulate the model from Angular material by having everything reusable as a module, you will find individuals components under the **libs/shared/ui/partials** folder and how everything gets imported in the **app.module.ts** file
 
 ```javascript
 /**
@@ -84,7 +86,7 @@ import {
 
 If you like that type of flow, well you are in for a treat, if not no hard feelings do what works for you - feel free to delete and replace as you see fit.
 
-🧙🏾 Tailwind's magic is sprinkled all around the project already and that's the only thing that matters
+**🧙🏾 Tailwind's magic is sprinkled all around the project already and that's the only thing that matters**
 
 ## Copyrights notice and shoutouts
 
@@ -106,5 +108,5 @@ All the images use in the starter page are copyrighted to their respecvtive owne
   - [**Zack DeRose**](https://t.co/lLJOZbAZWY?amp=1) ([**@zackderose**](https://twitter.com/zackderose))
 - [**Community**](https://expressjs.com)
   - [**Amadou Sall**](https://www.amadousall.com/) ([**@ahasall**](https://twitter.com/ahasall)) - Don't miss his talk on Tailwind at NGConf 2021
-  - **Ibrahima Ciss**] ([**@bionik6**](https://twitter.com/bionik6))
+  - **Ibrahima Ciss** ([**@bionik6**](https://twitter.com/bionik6))
   - [**Bram Borggreve**](https://beesoftlabs.dev/es/inicio) ([**@beeman_nl**](https://twitter.com/beeman_nl))
