@@ -123,6 +123,141 @@
           }
         }
       }
+    },
+    "shared-ui-header": {
+      "projectType": "library",
+      "root": "libs/shared/ui/header",
+      "sourceRoot": "libs/shared/ui/header/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/header/src/**/*.ts",
+              "libs/shared/ui/header/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/header"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-hero": {
+      "projectType": "library",
+      "root": "libs/shared/ui/hero",
+      "sourceRoot": "libs/shared/ui/hero/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/hero/src/**/*.ts",
+              "libs/shared/ui/hero/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/hero"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/hero/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-promo": {
+      "projectType": "library",
+      "root": "libs/shared/ui/promo",
+      "sourceRoot": "libs/shared/ui/promo/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/promo/src/**/*.ts",
+              "libs/shared/ui/promo/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/promo"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/promo/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-partials": {
+      "projectType": "library",
+      "root": "libs/shared/ui/partials",
+      "sourceRoot": "libs/shared/ui/partials/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/partials/src/**/*.ts",
+              "libs/shared/ui/partials/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/partials"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/partials/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-footer": {
+      "projectType": "library",
+      "root": "libs/shared/ui/footer",
+      "sourceRoot": "libs/shared/ui/footer/src",
+      "prefix": "tukki",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/footer/src/**/*.ts",
+              "libs/shared/ui/footer/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/shared/ui/footer"
+          ],
+          "options": {
+            "jestConfig": "libs/shared/ui/footer/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

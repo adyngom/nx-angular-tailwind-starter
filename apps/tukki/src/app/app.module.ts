@@ -2,13 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+
+/**
+ * Shared modules
+ */
+import { 
+  SharedUiHeaderModule,
+  SharedUiHeroModule,
+  SharedUiPromoModule,
+  SharedUiPartialsModule,
+  SharedUiFooterModule 
+} from '@tukki/shared/ui'
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    BrowserModule, 
+    SharedUiHeaderModule,
+    SharedUiHeroModule,
+    SharedUiPromoModule,
+    SharedUiPartialsModule,
+    SharedUiFooterModule
   ],
   providers: [],
   bootstrap: [AppComponent],
