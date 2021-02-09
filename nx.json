@@ -27,6 +27,8 @@
     "shared-ui-hero": { "tags": [] },
     "shared-ui-promo": { "tags": [] },
     "shared-ui-partials": { "tags": [] },
-    "shared-ui-footer": { "tags": [] }
+    "shared-ui-footer": { "tags": [] },
+    "terru": { "tags": [] },
+    "terru-e2e": { "tags": [], "implicitDependencies": ["terru"] }
   }
 }
