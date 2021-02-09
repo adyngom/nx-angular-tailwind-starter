@@ -1,14 +1,9 @@
 {
   "npmScope": "tukki",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -19,16 +14,14 @@
       "runner": "@nrwl/nx-cloud",
       "options": {
         "accessToken": "MzhiNzhlZjUtNDliYy00YjMwLWFkOGUtMDQyN2FhNzY5NTE3fHJlYWQtd3JpdGU=",
-        "cacheableOperations": [
-          "build",
-          "test",
-          "lint",
-          "e2e"
-        ],
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "tukki": { "tags": [] },
+    "tukki-e2e": { "tags": [], "implicitDependencies": ["tukki"] }
+  }
 }
