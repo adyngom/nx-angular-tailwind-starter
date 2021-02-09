@@ -1,16 +1,17 @@
 module.exports = {
-  purge: [
-    './apps/**/*.html',
-    './apps/**/*.ts',
-    './libs/**/*.html',
-    './libs/**/*.ts',
-  ],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
+    prefix: '',
+    purge: {
+      content: [
+        './apps/**/*.{html,js,ts,tsx}',
+        './libs/**/*.{html,js,ts,tsx}',
+      ]
+    },
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {},
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
 };

@@ -2,7 +2,7 @@
   "npmScope": "tukki",
   "affected": { "defaultBase": "master" },
   "implicitDependencies": {
-    "angular.json": "*",
+    "workspace.json": "*",
     "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
@@ -13,7 +13,7 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "accessToken": "ZjYwZmNiNzMtNzNmMC00NzczLWI1OTktZjk1NTM5MzU4ODQxfHJlYWQtd3JpdGU=",
+        "accessToken": "MzhiNzhlZjUtNDliYy00YjMwLWFkOGUtMDQyN2FhNzY5NTE3fHJlYWQtd3JpdGU=",
         "cacheableOperations": ["build", "test", "lint", "e2e"],
         "canTrackAnalytics": false,
         "showUsageWarnings": true
@@ -27,6 +27,8 @@
     "shared-ui-hero": { "tags": [] },
     "shared-ui-promo": { "tags": [] },
     "shared-ui-partials": { "tags": [] },
-    "shared-ui-footer": { "tags": [] }
+    "shared-ui-footer": { "tags": [] },
+    "terru": { "tags": [] },
+    "terru-e2e": { "tags": [], "implicitDependencies": ["terru"] }
   }
 }

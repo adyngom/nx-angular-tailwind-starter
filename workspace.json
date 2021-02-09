@@ -1,49 +1,14 @@
 {
-  "version": 1,
-  "cli": {
-    "analytics": "71c04e7b-554a-489b-bec3-f437c975b324",
-    "defaultCollection": "@nrwl/angular"
-  },
-  "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest"
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    },
-    "@schematics/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "defaultProject": "tukki",
+  "version": 2,
   "projects": {
     "tukki": {
       "projectType": "application",
       "root": "apps/tukki",
       "sourceRoot": "apps/tukki/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "build": {
-          "builder": "@angular-builders/custom-webpack:browser",
+          "executor": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/apps/tukki",
             "index": "apps/tukki/src/index.html",
@@ -94,7 +59,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-builders/custom-webpack:dev-server",
+          "executor": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "tukki:build"
           },
@@ -105,13 +70,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "executor": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "tukki:build"
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/tukki/src/**/*.ts",
@@ -120,7 +85,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/apps/tukki"
           ],
@@ -135,9 +100,9 @@
       "root": "apps/tukki-e2e",
       "sourceRoot": "apps/tukki-e2e/src",
       "projectType": "application",
-      "architect": {
+      "targets": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "executor": "@nrwl/cypress:cypress",
           "options": {
             "cypressConfig": "apps/tukki-e2e/cypress.json",
             "tsConfig": "apps/tukki-e2e/tsconfig.e2e.json",
@@ -150,7 +115,7 @@
           }
         },
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/tukki-e2e/**/*.{js,ts}"
@@ -164,9 +129,9 @@
       "root": "libs/shared/ui/header",
       "sourceRoot": "libs/shared/ui/header/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/shared/ui/header/src/**/*.ts",
@@ -175,7 +140,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/libs/shared/ui/header"
           ],
@@ -191,9 +156,9 @@
       "root": "libs/shared/ui/hero",
       "sourceRoot": "libs/shared/ui/hero/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/shared/ui/hero/src/**/*.ts",
@@ -202,7 +167,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/libs/shared/ui/hero"
           ],
@@ -218,9 +183,9 @@
       "root": "libs/shared/ui/promo",
       "sourceRoot": "libs/shared/ui/promo/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/shared/ui/promo/src/**/*.ts",
@@ -229,7 +194,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/libs/shared/ui/promo"
           ],
@@ -245,9 +210,9 @@
       "root": "libs/shared/ui/partials",
       "sourceRoot": "libs/shared/ui/partials/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/shared/ui/partials/src/**/*.ts",
@@ -256,7 +221,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/libs/shared/ui/partials"
           ],
@@ -272,9 +237,9 @@
       "root": "libs/shared/ui/footer",
       "sourceRoot": "libs/shared/ui/footer/src",
       "prefix": "tukki",
-      "architect": {
+      "targets": {
         "lint": {
-          "builder": "@nrwl/linter:eslint",
+          "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "libs/shared/ui/footer/src/**/*.ts",
@@ -283,7 +248,7 @@
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "executor": "@nrwl/jest:jest",
           "outputs": [
             "coverage/libs/shared/ui/footer"
           ],
@@ -293,6 +258,159 @@
           }
         }
       }
+    },
+    "terru": {
+      "root": "apps/terru",
+      "sourceRoot": "apps/terru/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": [
+            "{options.outputPath}"
+          ],
+          "options": {
+            "outputPath": "dist/apps/terru",
+            "index": "apps/terru/src/index.html",
+            "main": "apps/terru/src/main.tsx",
+            "polyfills": "apps/terru/src/polyfills.ts",
+            "tsConfig": "apps/terru/tsconfig.app.json",
+            "assets": [
+              "apps/terru/src/favicon.ico",
+              "apps/terru/src/assets"
+            ],
+            "styles": [
+              "apps/terru/src/styles.scss",
+              "apps/terru/src/tailwind.css"
+            ],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/terru/src/environments/environment.ts",
+                  "with": "apps/terru/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "build-tailwind-css": {
+          "builder": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "command": "node node_modules/.bin/postcss apps/terru/src/styles.scss -o apps/terru/src/app/tailwind.css",
+            "cwd": "apps/terru"
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "terru:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "terru:build:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/terru/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/apps/terru"
+          ],
+          "options": {
+            "jestConfig": "apps/terru/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "terru-e2e": {
+      "root": "apps/terru-e2e",
+      "sourceRoot": "apps/terru-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/terru-e2e/cypress.json",
+            "tsConfig": "apps/terru-e2e/tsconfig.e2e.json",
+            "devServerTarget": "terru:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "terru:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/terru-e2e/**/*.{js,ts}"
+            ]
+          }
+        }
+      }
     }
-  }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
+    },
+    "@nrwl/react": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint",
+        "babel": true
+      },
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
+  },
+  "defaultProject": "tukki"
 }
