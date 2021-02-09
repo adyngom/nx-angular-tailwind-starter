@@ -8,7 +8,7 @@
       "prefix": "tukki",
       "targets": {
         "build": {
-          "executor": "@angular-devkit/build-angular:browser",
+          "executor": "@angular-builders/custom-webpack:browser",
           "options": {
             "outputPath": "dist/apps/tukki",
             "index": "apps/tukki/src/index.html",
@@ -23,7 +23,10 @@
             "styles": [
               "apps/tukki/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "customWebpackConfig": {
+              "path": "webpack.config.js"
+            }
           },
           "configurations": {
             "production": {
@@ -56,7 +59,7 @@
           }
         },
         "serve": {
-          "executor": "@angular-devkit/build-angular:dev-server",
+          "executor": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "tukki:build"
           },
